@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./asset/style.css">
+  <script src="asset/main.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Splitter logo">
+  </header>
+  <div class = "main">
+    <div class = "input">
+      <div class = "input_bill">
+        <h2>Bill</h2>
+        <input type="number" id="bill-input" placeholder="0">
+      </div>
+
+      <div class= "input_tip">
+        <h2>Select tip %</h2>
+        <div class = "input_tip_list">
+          <a href = "#tip1" id = "tip1" class = "tip" id = "tip1">5</a>
+          <a href = "#tip2" id = "tip2" class = "tip" id = "tip2">10</a>
+          <a href = "#tip3" id = "tip3" class = "tip" id = "tip3">15</a>
+          <a href = "#tip4" id = "tip4" class = "tip" id = "tip4">25</a>
+          <a href = "#tip5" id = "tip5" class = "tip" id = "tip5">50</a>
+          <a href = "#tipcustom" id='tipcustom' class='tip'>
+            <input type="number" id='custom-percent' class='customtip_input' min='1' max='999' placeholder="Custom">
+          </a>
+        </div>
+      </div>
+
+      <div class = "input_people">
+        <h2>Numebr of People</h2>
+        <input type="number" id="people-input" placeholder="0">
+      </div>
+    </div>
+    <div class=  "output">
+      <div class = "output_tipperperson">
+        <div class = "ouput_tipperperson_text">
+          <h2>Tip Amount</h2>
+          <p>/ person</p>
+        </div>
+        <div class = "ouput_tipperperson_result result" id = "tip_result">
+          $0.00
+        </div>
+      </div>
+
+      <div class = "ouput_totalperperson">
+        <div class = "ouput_totalperperson_text">
+          <h2>Total Amount</h2>
+          <p>/ person</p>
+        </div>
+        <div class = "ouput_totalperperson_reusult result" id = "total_result">
+          $0.00
+        </div>
+      </div>
+
+      <div class ="ouput_resetbtn">
+        <div id = "reset">RESET</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/NhatNgo97">Minh Nhat Ngo</a>.
+  </div>
+  <script>
+    calculate();
+  </script>
+</body>
+
+</html>
+
+

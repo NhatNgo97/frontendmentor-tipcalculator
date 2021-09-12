@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    background-color:hsl(185deg 41% 84%);
+}
+
+h2{
+    font-size: 1em;
+}
+.main{
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    margin: auto;
+    padding: 1em;
+    width: 90%;
+    max-width: 650px;
+}
+
+input{
+    height: 2.4em;
+    background-color:hsl(189, 41%, 97%);
+    border:none;
+    text-align: right;
+    cursor: pointer;
+    padding: 0.5em;
+    font-weight: 600;
+}
+
+.input{
+    width: 50%;
+    margin-right: 0.5em;
+}
+
+.input h2{
+    color:hsl(172, 67%, 45%);
+    font-size: 13px;
+    margin-top: 1em;
+}
+
+input{
+    width: 100%;
+}
+
+#bill-input{
+    background: url('images/icon-dollar.svg') no-repeat scroll 15px 10px hsl(189, 41%, 97%);
+    background-size: 0.36rem;
+}
+
+.input_tip_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.tip{
+    display: inline-flex;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    width: 30%;
+    margin: 0.4em auto;
+    justify-content: center;
+    align-items: center;
+    height: 2.4em;
+}
+
+.tip:target, .custom-tip:target {
+    background: hsl(172, 67%, 45%);
+    color: rgb(5, 71, 74);
+}
+
+.customtip{
+    width: 33%;
+
+}
+.customtip_input{
+    width: 100%;
+    
+}
+
+.tip:hover{
+    background-color:hsl(189, 41%, 97%);
+    color: black;
+}
+
+
+#tip1::after,
+#tip2::after,
+#tip3::after,
+#tip4::after,
+#tip5::after{
+    content: "%";
+}
+
+#people-input{
+    background: url('images/icon-person.svg') no-repeat scroll 15px 10px hsl(189, 41%, 97%);
+    background-size: 0.43rem;
+}
+
+.output{
+
+    background-color: hsl(183, 100%, 15%);
+    padding: 0.8em;
+    border-radius: 0.3em;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.output_tipperperson, .ouput_totalperperson{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2em;
+}
+
+.ouput_tipperperson_result, .ouput_totalperperson_reusult{
+    color : hsl(172deg 67% 45%);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.ouput_resetbtn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 45%;
+    width: 100%;
+}
+
+.ouput_resetbtn #reset{
+    background-color: hsl(172deg 67% 45%);
+    width: 95%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 2em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+}
+
+.ouput_resetbtn #reset:hover{
+    background-color:hsl(189, 41%, 97%);
+}
+
+.ouput_totalperperson_text > h2, .ouput_tipperperson_text > h2{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ouput_totalperperson_text > p, .ouput_tipperperson_text > p{
+    color:hsl(172, 67%, 45%);
+    font-size: 10px;
+}
+
+@media  screen and (max-width: 600px) {
+    .main{
+        flex-direction: column;
+    }
+
+    .input{
+        width: 100%;
+        margin-bottom: 0.5em;;
+    }
+
+    .output{
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    #reset{
+        margin-top:2em;
+    }
+}
